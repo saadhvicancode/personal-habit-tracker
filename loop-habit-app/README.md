@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Loop Habit App
 
-## Getting Started
+A minimal habit-building app built with Next.js App Router. Track habits, reflect daily, and earn playful rewards.
 
-First, run the development server:
+### Features
+- Habit cards with progress and insights
+- Daily reflection form (`/api/reflect` endpoint)
+- Rewards screen with animated coins and confetti
+- Responsive UI with Tailwind CSS
+
+### Tech Stack
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Framer Motion** for animations
+
+### Quick Start
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Visit `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts
+- `npm run dev` — start development server
+- `npm run build` — production build
+- `npm run start` — start production server
+- `npm run lint` — run ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Project Structure
 
-## Learn More
+```
+app/
+  api/
+    reflect/route.ts        # Reflection API endpoint
+  components/               # UI components (HabitCard, InsightCard, etc.)
+  dashboard/page.tsx        # Dashboard page
+  rewards/page.tsx          # Rewards page with animations
+  page.tsx                  # Landing/home page
+  layout.tsx                # Root layout
+  globals.css               # Global styles (Tailwind)
+public/                     # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Environment Variables
+No secrets are required by default. If you add any, set them in your host (e.g., Vercel → Project → Settings → Environment Variables) and rebuild.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deployment (Vercel Recommended)
+1. Push this repo to GitHub.
+2. Go to Vercel and import the repository.
+3. Accept the auto-detected Next.js settings and deploy.
+4. Share the live URL (e.g., `https://your-project.vercel.app`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+CLI alternative:
 
-## Deploy on Vercel
+```bash
+npm i -g vercel
+vercel --prod
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Contributing
+PRs are welcome. Please run `npm run lint` before submitting.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### License
+MIT
